@@ -2,7 +2,7 @@ package model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
-@JsonFormat(shape=JsonFormat.Shape.STRING)
+@JsonFormat(shape = JsonFormat.Shape.STRING)
 public class SearchResponse {
 
     private int start;

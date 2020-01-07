@@ -2,8 +2,6 @@ package model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import java.util.PrimitiveIterator;
-
 public class Docs {
 
     public Docs() {

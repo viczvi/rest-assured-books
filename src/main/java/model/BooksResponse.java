@@ -1,11 +1,11 @@
 package model;
 
-import java.util.Date;
-
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-@JsonFormat(shape=JsonFormat.Shape.STRING)
+import java.util.Date;
+
+@JsonFormat(shape = JsonFormat.Shape.STRING)
 public class BooksResponse {
 
     private String comment;
