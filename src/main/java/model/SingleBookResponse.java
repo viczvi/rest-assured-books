@@ -1,30 +1,33 @@
 package model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonAnySetter;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class SingleBookResponse {
 
-    @JsonProperty("ISBN:0201558025")
-    private String isbnCode;
+    private Map<String, Object> rootElement = new HashMap<>();
 
-    private BookDetails bookeDetails;
-
-    public String getIsbnCode() {
-        return isbnCode;
-    }
+    private BookDetails bookDetails;
 
     public SingleBookResponse() {
     }
 
-    public void setIsbnCode(String isbnCode) {
-        this.isbnCode = isbnCode;
+    @JsonAnySetter
+    public void setRootElement(String key, Object value) {
+        rootElement.put(key, value);
     }
 
-    public BookDetails getBookeDetails() {
-        return bookeDetails;
+    public Object getRootElement() {
+        return rootElement;
     }
 
-    public void setBookeDetails(BookDetails bookeDetails) {
-        this.bookeDetails = bookeDetails;
+    public BookDetails getBookDetails() {
+        return bookDetails;
+    }
+
+    public void setBookDetails(BookDetails bookeDetails) {
+        this.bookDetails = bookeDetails;
     }
 }

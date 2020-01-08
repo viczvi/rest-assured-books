@@ -12,6 +12,7 @@ import static matchers.EmptySearchResponseMatchers.emptySearchResponse;
 import static matchers.NonEmptySearchReponseMatchers.nonEmptySearchReponseMatchers;
 import static matchers.SearchResponseMatcherWithResult.searchResponseMatcherWithResult;
 import static org.hamcrest.MatcherAssert.assertThat;
+import static utils.HttpResponseCodes.HTTP_200;
 import static utils.Urls.getSearchApiUrl;
 
 class SearchTest extends BaseTest {
@@ -25,7 +26,7 @@ class SearchTest extends BaseTest {
                 .when()
                 .get(getSearchApiUrl())
                 .then()
-                .statusCode(200)
+                .statusCode(HTTP_200.getCode())
                 .extract()
                 .as(SearchResponse.class);
         assertThat(searchResponse, emptySearchResponse());
@@ -40,7 +41,7 @@ class SearchTest extends BaseTest {
                 .when()
                 .get(getSearchApiUrl())
                 .then()
-                .statusCode(200)
+                .statusCode(HTTP_200.getCode())
                 .extract()
                 .as(SearchResponse.class);
         assertThat(searchResponse, nonEmptySearchReponseMatchers());
@@ -56,7 +57,7 @@ class SearchTest extends BaseTest {
                 .when()
                 .get(getSearchApiUrl())
                 .then()
-                .statusCode(200)
+                .statusCode(HTTP_200.getCode())
                 .extract()
                 .as(SearchResponse.class);
         assertThat(searchResponse, searchResponseMatcherWithResult(searchKeyword));
