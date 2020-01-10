@@ -4,9 +4,9 @@ import model.Docs;
 import model.SearchResponse;
 
 public final class SearchResponseBuilder {
-    private int start;
-    private int num_found;
-    private int numFound;
+    private Integer start;
+    private Integer num_found;
+    private Integer numFound;
     private Docs[] docs;
 
     private SearchResponseBuilder() {
@@ -16,17 +16,17 @@ public final class SearchResponseBuilder {
         return new SearchResponseBuilder();
     }
 
-    public SearchResponseBuilder withStart(int start) {
+    public SearchResponseBuilder withStart(Integer start) {
         this.start = start;
         return this;
     }
 
-    public SearchResponseBuilder withNum_found(int num_found) {
+    public SearchResponseBuilder withNum_found(Integer num_found) {
         this.num_found = num_found;
         return this;
     }
 
-    public SearchResponseBuilder withNumFound(int numFound) {
+    public SearchResponseBuilder withNumFound(Integer numFound) {
         this.numFound = numFound;
         return this;
     }

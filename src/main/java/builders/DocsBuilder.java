@@ -6,32 +6,32 @@ public final class DocsBuilder {
     private String titleSuggest;
     private String[] publisher;
     private String[] editionKey;
-    private int coverI;
+    private Integer coverI;
     private String[] isbn;
     private boolean hasFulltext;
     private String[] text;
     private String title;
-    private int lastModifiedI;
-    private int editionCount;
+    private Integer lastModifiedI;
+    private Integer editionCount;
     private String[] authorName;
     private String[] seed;
-    private int firstPublishYear;
-    private int[] publishYear;
+    private Integer firstPublishYear;
+    private Integer[] publishYear;
     private String key;
     private String[] publishDate;
     private String[] authorKey;
     private String type;
-    private int ebookCountI;
-    private int[] goodreadsId;
-    private int[] librarythingId;
+    private Integer ebookCountI;
+    private Integer[] goodreadsId;
+    private Integer[] librarythingId;
     private String coverEditionKey;
     private String[] firstSentence;
     private String[] language;
-    private int[] oclc;
+    private Integer[] oclc;
     private String[] subject;
     private String[] publishPlace;
     private String[] place;
-    private int[] lccn;
+    private Integer[] lccn;
     private String[] person;
     private String[] contributor;
     private String[] ia;
@@ -40,6 +40,7 @@ public final class DocsBuilder {
     private boolean publicScanB;
     private String[] iaBoxId;
     private String[] idOverdrive;
+    private String[] idDepositLegal;
 
     private DocsBuilder() {
     }
@@ -63,7 +64,7 @@ public final class DocsBuilder {
         return this;
     }
 
-    public DocsBuilder withCoverI(int coverI) {
+    public DocsBuilder withCoverI(Integer coverI) {
         this.coverI = coverI;
         return this;
     }
@@ -88,12 +89,12 @@ public final class DocsBuilder {
         return this;
     }
 
-    public DocsBuilder withLastModifiedI(int lastModifiedI) {
+    public DocsBuilder withLastModifiedI(Integer lastModifiedI) {
         this.lastModifiedI = lastModifiedI;
         return this;
     }
 
-    public DocsBuilder withEditionCount(int editionCount) {
+    public DocsBuilder withEditionCount(Integer editionCount) {
         this.editionCount = editionCount;
         return this;
     }
@@ -108,12 +109,12 @@ public final class DocsBuilder {
         return this;
     }
 
-    public DocsBuilder withFirstPublishYear(int firstPublishYear) {
+    public DocsBuilder withFirstPublishYear(Integer firstPublishYear) {
         this.firstPublishYear = firstPublishYear;
         return this;
     }
 
-    public DocsBuilder withPublishYear(int[] publishYear) {
+    public DocsBuilder withPublishYear(Integer[] publishYear) {
         this.publishYear = publishYear;
         return this;
     }
@@ -138,17 +139,17 @@ public final class DocsBuilder {
         return this;
     }
 
-    public DocsBuilder withEbookCountI(int ebookCountI) {
+    public DocsBuilder withEbookCountI(Integer ebookCountI) {
         this.ebookCountI = ebookCountI;
         return this;
     }
 
-    public DocsBuilder withGoodreadsId(int[] goodreadsId) {
+    public DocsBuilder withGoodreadsId(Integer[] goodreadsId) {
         this.goodreadsId = goodreadsId;
         return this;
     }
 
-    public DocsBuilder withLibrarythingId(int[] librarythingId) {
+    public DocsBuilder withLibrarythingId(Integer[] librarythingId) {
         this.librarythingId = librarythingId;
         return this;
     }
@@ -168,7 +169,7 @@ public final class DocsBuilder {
         return this;
     }
 
-    public DocsBuilder withOclc(int[] oclc) {
+    public DocsBuilder withOclc(Integer[] oclc) {
         this.oclc = oclc;
         return this;
     }
@@ -188,7 +189,7 @@ public final class DocsBuilder {
         return this;
     }
 
-    public DocsBuilder withLccn(int[] lccn) {
+    public DocsBuilder withLccn(Integer[] lccn) {
         this.lccn = lccn;
         return this;
     }
@@ -233,6 +234,11 @@ public final class DocsBuilder {
         return this;
     }
 
+    public DocsBuilder withIdDepositLegal(String[] idDepositLegal) {
+        this.idDepositLegal = idDepositLegal;
+        return this;
+    }
+
     public Docs build() {
         Docs docs = new Docs();
         docs.setTitleSuggest(titleSuggest);
@@ -272,6 +278,7 @@ public final class DocsBuilder {
         docs.setPublicScanB(publicScanB);
         docs.setIaBoxId(iaBoxId);
         docs.setIdOverdrive(idOverdrive);
+        docs.setIdDepositLegal(idDepositLegal);
         return docs;
     }
 }

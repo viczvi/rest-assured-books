@@ -5,20 +5,20 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 @JsonFormat(shape = JsonFormat.Shape.STRING)
 public class SearchResponse {
 
-    private int start;
-    private int num_found;
-    private int numFound;
+    private Integer start;
+    private Integer num_found;
+    private Integer numFound;
     private Docs[] docs;
 
-    public int getStart() {
+    public Integer getStart() {
         return start;
     }
 
-    public void setStart(int start) {
+    public void setStart(Integer start) {
         this.start = start;
     }
 
-    public int getNum_found() {
+    public Integer getNum_found() {
         return num_found;
     }
 
@@ -26,7 +26,7 @@ public class SearchResponse {
         this.num_found = num_found;
     }
 
-    public int getNumFound() {
+    public Integer getNumFound() {
         return numFound;
     }
 
@@ -42,7 +42,7 @@ public class SearchResponse {
         this.docs = docs;
     }
 
-    public SearchResponse(int start, int num_found, int numFound, Docs[] docs) {
+    public SearchResponse(Integer start, Integer num_found, Integer numFound, Docs[] docs) {
         this.start = start;
         this.num_found = num_found;
         this.numFound = numFound;

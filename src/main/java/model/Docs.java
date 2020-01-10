@@ -17,7 +17,7 @@ public class Docs {
     private String[] editionKey;
 
     @JsonProperty("cover_i")
-    private int coverI;
+    private Integer coverI;
 
     private String[] isbn;
 
@@ -29,10 +29,10 @@ public class Docs {
     private String title;
 
     @JsonProperty("last_modified_i")
-    private int lastModifiedI;
+    private Integer lastModifiedI;
 
     @JsonProperty("edition_count")
-    private int editionCount;
+    private Integer editionCount;
 
     @JsonProperty("author_name")
     private String[] authorName;
@@ -40,10 +40,10 @@ public class Docs {
     private String[] seed;
 
     @JsonProperty("first_publish_year")
-    private int firstPublishYear;
+    private Integer firstPublishYear;
 
     @JsonProperty("publish_year")
-    private int[] publishYear;
+    private Integer[] publishYear;
 
     private String key;
 
@@ -56,13 +56,13 @@ public class Docs {
     private String type;
 
     @JsonProperty("ebook_count_i")
-    private int ebookCountI;
+    private Integer ebookCountI;
 
     @JsonProperty("id_goodreads")
-    private int[] goodreadsId;
+    private Integer[] goodreadsId;
 
     @JsonProperty("id_librarything")
-    private int[] librarythingId;
+    private Integer[] librarythingId;
 
     @JsonProperty("cover_edition_key")
     private String coverEditionKey;
@@ -72,7 +72,7 @@ public class Docs {
 
     private String[] language;
 
-    private int[] oclc;
+    private Integer[] oclc;
 
     private String[] subject;
 
@@ -81,7 +81,7 @@ public class Docs {
 
     private String[] place;
 
-    private int[] lccn;
+    private Integer[] lccn;
 
     private String[] person;
 
@@ -179,11 +179,11 @@ public class Docs {
         this.firstSentence = firstSentence;
     }
 
-    public int[] getLibrarythingId() {
+    public Integer[] getLibrarythingId() {
         return librarythingId;
     }
 
-    public void setLibrarythingId(int[] librarythingId) {
+    public void setLibrarythingId(Integer[] librarythingId) {
         this.librarythingId = librarythingId;
     }
 
@@ -227,11 +227,11 @@ public class Docs {
         this.editionKey = editionKey;
     }
 
-    public int getCoverI() {
+    public Integer getCoverI() {
         return coverI;
     }
 
-    public void setCoverI(int coverI) {
+    public void setCoverI(Integer coverI) {
         this.coverI = coverI;
     }
 
@@ -267,7 +267,7 @@ public class Docs {
         this.title = title;
     }
 
-    public int getLastModifiedI() {
+    public Integer getLastModifiedI() {
         return lastModifiedI;
     }
 
@@ -275,7 +275,7 @@ public class Docs {
         this.lastModifiedI = lastModifiedI;
     }
 
-    public int getEditionCount() {
+    public Integer getEditionCount() {
         return editionCount;
     }
 
@@ -299,7 +299,7 @@ public class Docs {
         this.seed = seed;
     }
 
-    public int getFirstPublishYear() {
+    public Integer getFirstPublishYear() {
         return firstPublishYear;
     }
 
@@ -307,11 +307,11 @@ public class Docs {
         this.firstPublishYear = firstPublishYear;
     }
 
-    public int[] getPublishYear() {
+    public Integer[] getPublishYear() {
         return publishYear;
     }
 
-    public void setPublishYear(int[] publishYear) {
+    public void setPublishYear(Integer[] publishYear) {
         this.publishYear = publishYear;
     }
 
@@ -347,7 +347,7 @@ public class Docs {
         this.type = type;
     }
 
-    public int getEbookCountI() {
+    public Integer getEbookCountI() {
         return ebookCountI;
     }
 
@@ -355,11 +355,11 @@ public class Docs {
         this.ebookCountI = ebookCountI;
     }
 
-    public int[] getGoodreadsId() {
+    public Integer[] getGoodreadsId() {
         return goodreadsId;
     }
 
-    public void setGoodreadsId(int[] goodreadsId) {
+    public void setGoodreadsId(Integer[] goodreadsId) {
         this.goodreadsId = goodreadsId;
     }
 
@@ -371,11 +371,11 @@ public class Docs {
         this.language = language;
     }
 
-    public int[] getOclc() {
+    public Integer[] getOclc() {
         return oclc;
     }
 
-    public void setOclc(int[] oclc) {
+    public void setOclc(Integer[] oclc) {
         this.oclc = oclc;
     }
 
@@ -395,11 +395,11 @@ public class Docs {
         this.subject = subject;
     }
 
-    public int[] getLccn() {
+    public Integer[] getLccn() {
         return lccn;
     }
 
-    public void setLccn(int[] lccn) {
+    public void setLccn(Integer[] lccn) {
         this.lccn = lccn;
     }
 

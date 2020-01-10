@@ -2,6 +2,7 @@ package tests;
 
 import model.SingleBookResponse;
 import org.junit.jupiter.api.Test;
+import runner.BaseTest;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -15,7 +16,7 @@ import static utils.Constants.VALID_ISBN;
 import static utils.HttpResponseCodes.HTTP_200;
 import static utils.Urls.getBooksApiUrl;
 
-class SingleBookTest {
+class SingleBookTest extends BaseTest {
 
     @Test
     void singleBookByIsbn() {
@@ -48,4 +49,11 @@ class SingleBookTest {
                 .as(SingleBookResponse.class);
         assertThat(singleBookResponse, emptyBookResponseMatcher());
     }
+
+//    @Test
+//    void logInTest() {
+//        username: palpatin280491@gmail.com
+//        password: 123qweASD
+//        given().when().post("https://openlibrary.org/account/login").then().statusCode(303)
+//    }
 }
