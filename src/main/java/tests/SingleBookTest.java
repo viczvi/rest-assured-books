@@ -49,11 +49,4 @@ class SingleBookTest extends BaseTest {
                 .as(SingleBookResponse.class);
         assertThat(singleBookResponse, emptyBookResponseMatcher());
     }
-
-//    @Test
-//    void logInTest() {
-//        username: palpatin280491@gmail.com
-//        password: 123qweASD
-//        given().when().post("https://openlibrary.org/account/login").then().statusCode(303)
-//    }
 }
